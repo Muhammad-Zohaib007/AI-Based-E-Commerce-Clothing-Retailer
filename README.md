@@ -1,14 +1,40 @@
-# Fashion Forward: AI-Driven Garment Classification
+# 👕 Fashion Forward: CNN-Based Garment Classification
 
-Fashion Forward is an AI-powered e-commerce initiative aimed at revolutionizing product categorization. By leveraging deep learning, this project automates the sorting of new clothing listings into distinct categories (e.g., shirts, trousers, shoes), optimizing the customer search experience and streamlining inventory management.
+**Simple Deep Learning Prototype for Clothing Image Classification**  
+Built with PyTorch, FashionMNIST, and CNN fundamentals
 
-## 📌 Project Overview
-As e-commerce scales, manual categorization becomes a bottleneck. This project implements a **Convolutional Neural Network (CNN)** built with **PyTorch** to classify garment images accurately. 
+---
 
-### Key Objectives:
-* Automate product categorization for faster listing.
-* Enhance user experience through accurate search filters.
-* Improve inventory logistics via automated sorting.
+## 📌 Overview
+
+This project demonstrates how a Convolutional Neural Network (CNN) can be used to classify clothing images.
+
+It is built as a prototype for automated garment categorization, inspired by real-world e-commerce use cases such as product tagging and inventory organization.
+
+---
+
+## 🎯 Problem Statement
+
+Manually categorizing clothing images is time-consuming and inconsistent.
+
+This project shows how deep learning can automate this process by classifying images into predefined categories, forming a foundation for:
+
+- Product categorization  
+- Improved search filtering  
+- Inventory organization  
+
+---
+
+## 🧠 Dataset
+
+This project uses the FashionMNIST dataset.
+
+| Feature      | Value |
+|-------------|------|
+| Image Type   | Grayscale |
+| Image Size   | 28 × 28 |
+| Classes      | 10 |
+| Examples     | Shirt, Shoe, Bag, Dress |
 
 ---
 
@@ -25,18 +51,47 @@ The project utilizes a custom `MultiClassImageClassifier` designed for efficient
 [Image of Convolutional Neural Network architecture]
 
 
+
+### 🔍 Layer Purpose
+
+- **Conv2D**: Extracts visual features like edges and textures  
+- **ReLU**: Adds non-linearity to learn complex patterns  
+- **MaxPooling**: Reduces image size while keeping important features  
+- **Fully Connected Layer**: Produces final class predictions  
+
 ---
 
 ## 🚀 Features
-- **Deep Learning Framework**: Built using `PyTorch`.
-- **Advanced Metrics**: Evaluation performed using `torchmetrics` for Accuracy, Precision, and Recall (per-class analysis).
-- **Scalable Pipeline**: Includes DataLoaders for efficient batch processing.
+
+- Custom CNN built with PyTorch  
+- Efficient data loading using DataLoader  
+- Evaluation using TorchMetrics  
+- Per-class performance analysis  
 
 ---
 
-## 🛠️ Installation & Setup
+## ⚙️ How It Works
 
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/YOUR_USERNAME/fashion-forward.git](https://github.com/YOUR_USERNAME/fashion-forward.git)
-   cd fashion-forward
+1. Load FashionMNIST dataset  
+2. Convert images into tensors  
+3. Train CNN using CrossEntropyLoss  
+4. Optimize using Adam optimizer  
+5. Evaluate using accuracy, precision, and recall  
+
+---
+
+## 📊 Evaluation
+
+The model is evaluated using:
+
+- **Accuracy**: Overall correctness  
+- **Precision (per class)**: How many predicted items are correct  
+- **Recall (per class)**: How many actual items are correctly identified  
+
+---
+
+## 🛠️ Installation
+
+```bash
+git clone https://github.com/YOUR_USERNAME/fashion-forward.git
+cd fashion-forward
